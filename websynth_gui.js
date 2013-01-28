@@ -25,7 +25,10 @@ $(function() {
 	$('<img />').keypad({
 		id: 'key_0',
 		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(0);}), mouseup:   (function() {p.stop();})
+		mousedown: (function() {p.play(0);}), mouseup:   (function() {p.stop();}),
+		keypress: (function() {
+  alert("Handler for .keypress() called.");
+})
 	}).appendTo('#draw');
 	n++;
 	$('<img />').keypad({
